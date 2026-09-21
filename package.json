@@ -1,0 +1,35 @@
+{
+  "name": "brickmaster-erp-backend",
+  "version": "1.0.0",
+  "description": "BrickMaster ERP - Node.js + Express + PostgreSQL backend API",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "migrate": "psql -U $PGUSER -d $PGDATABASE -f database/schema.sql",
+    "seed": "node database/seed.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.12.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.4.5",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "express-rate-limit": "^7.4.0",
+    "express-validator": "^7.2.0",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.1",
+    "exceljs": "^4.4.0",
+    "pdfkit": "^0.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
